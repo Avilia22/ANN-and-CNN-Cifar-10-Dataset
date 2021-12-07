@@ -12,8 +12,8 @@ import numpy as np
 #Spilit Data into Training and Test 
 (x_train,y_train),(x_test,y_test)=cifar10.load_data()
 
-x_train.shape
-x_test.shape
+print(x_train.shape)
+print(x_test.shape)
 
 x_train=x_train/255
 x_test=x_test/255
@@ -53,12 +53,5 @@ print(yp)
 
 print(classifier.evaluate(x_test,y_test))
 
-plt.imshow(x_test[13])
-plt.show()
-
-np.argmax(yp[13])
-
-class_label=["airplane","automobile","bird","cat","deer","dog","frog","horse","ship","truck"]
-class_label[np.argmax(yp[13])]
 
 
